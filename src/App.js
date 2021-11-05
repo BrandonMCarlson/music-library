@@ -4,7 +4,7 @@ import './App.css';
 import axios from 'axios';
 import InformationHolder from './Components/InformationHolder'
 
-export default class Library extends React.Component {
+class Library extends React.Component {
   state = {
     persons: []
   }
@@ -27,3 +27,4 @@ export default class Library extends React.Component {
   }
 }
 
+export default Library;
