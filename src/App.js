@@ -1,28 +1,32 @@
 import React, { Component } from 'react';
 import reactDom from 'react-dom';
-import './App.css';
 import axios from 'axios';
-import InformationHolder from './Components/InformationHolder'
 
-class Library extends React.Component {
-  state = {
-    persons: []
-  }
+
+
+class Library extends Component {
+  state = { }
 
   componentDidMount() {
-    // GET request using axios with error handling
-    axios.get('http://www.devcodecampmusiclibrary.com/')
-        .then(response => this.setState({ totalReactPackages: response.data.total }))
-        .catch(error => {
-            this.setState({ errorMessage: error.message });
-            console.error('There was an error!', error);
-        });
-}
+    this.makeGetRequest();
+  }
+
+  async makeGetRequest() {
+    try{
+      let response = await axios.get('http://www.devcodecampmusiclibrary.com/');
+      console.log(response.data)
+    }
+    catch(ex) {
+      console.log('Error in API call!');
+    }
+  }
+
   render() {
     return (
-      <ul>
-        { this.state.persons.map(person => <li>{person.name}</li>)}
-      </ul>
+      <React.Fragment>
+      <h1> Async Await Axios Example</h1>
+      <button onClick={this.makeGetRequest}>Remake Call</button>
+      </React.Fragment>
     )
   }
 }

@@ -1,24 +1,12 @@
 import React, {Component} from 'react';
-import App from '../App'
+import InfoHelp from 'InformationHolder.css'
 
-
-class InformationHolder extends Component{
-    render() {
-        const rows = [
-            'Artist',
-            'Song',
-            'Album',
-            'Genre',
-            'Release'
-        ];
-        return (
-            <div>
-                <li>
-                    <h1>rows={rows} </h1>
-                </li>
-            </div>
-        )
-    }
+const InformationHolder = ({data}) => {
+    return (
+        <div>
+            <ul>
+                {data.map((person, index)=>)}
+            </ul>
+        </div>
+    )
 }
-
-export default InformationHolder;
