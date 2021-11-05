@@ -1,12 +1,19 @@
 import React, {Component} from 'react';
-import InfoHelp from 'InformationHolder.css'
+import { getDefaultNormalizer } from '@testing-library/dom';
 
-const InformationHolder = ({data}) => {
+
+const songs = ({ songs }) => {
     return (
         <div>
             <ul>
-                {data.map((person, index)=>)}
+                {songs.map((e, i) => (
+                    <li key={i} className='list'>
+                        
+                    </li>
+                ))}
             </ul>
         </div>
-    )
-}
+    );
+};
+
+export default songs;

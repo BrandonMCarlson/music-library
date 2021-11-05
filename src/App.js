@@ -1,34 +1,36 @@
 import React, { Component } from 'react';
 import reactDom from 'react-dom';
 import axios from 'axios';
+import InformationHolder from './Components/InformationHolder';
+import ReactTable from 'react-table';
+import Bootstrap from 'react-bootstrap';
 
 
 
-class Library extends Component {
-  state = { }
-
-  componentDidMount() {
-    this.makeGetRequest();
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { 
+      songs: [],
+     };
   }
 
-  async makeGetRequest() {
-    try{
-      let response = await axios.get('http://www.devcodecampmusiclibrary.com/');
-      console.log(response.data)
-    }
-    catch(ex) {
-      console.log('Error in API call!');
-    }
+  async componentDidMount() {
+    await axios.get('http://www.devcodecampmusiclibrary.com/api/music/')
+    .then((res) => {
+      console.log(res)
+      const songs = res.data;
+      this.setState({songs});
+    });
   }
-
-  render() {
-    return (
-      <React.Fragment>
-      <h1> Async Await Axios Example</h1>
-      <button onClick={this.makeGetRequest}>Remake Call</button>
-      </React.Fragment>
-    )
+  render() { 
+    return ( 
+      <div>
+        <InformationHolder songs={this.state.songs} /> 
+      </div>
+     );
   }
 }
+ 
+export default App;
 
-export default Library;
