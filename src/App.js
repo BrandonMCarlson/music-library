@@ -29,8 +29,8 @@ class App extends Component {
 
   render() { 
     return ( 
-      <div>
-          <InformationHolder songs={this.state.songs} />
+      <div className="App">
+        <InformationHolder songs={this.state.songs}/>
       </div>
      );
   }
