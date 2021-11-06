@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import reactDom from 'react-dom';
 import axios from 'axios';
 import InformationHolder from './Components/InformationHolder';
-import ReactTable from 'react-table';
-import Bootstrap from 'react-bootstrap';
+
+
+
 
 
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = { 
       songs: [],
      };
@@ -21,12 +21,16 @@ class App extends Component {
       console.log(res)
       const songs = res.data;
       this.setState({songs});
-    });
+    })
   }
+
+  componentDidUpdate() {}
+
+
   render() { 
     return ( 
       <div>
-        <InformationHolder songs={this.state.songs} /> 
+          <InformationHolder songs={this.state.songs} />
       </div>
      );
   }
