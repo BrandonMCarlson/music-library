@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import InformationHolder from './Components/InformationHolder';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
