@@ -3,3 +3,15 @@
     font-family: fantasy;
        
 }
+.btn{
+    align-self: auto;
+    color:whitesmoke;
+}
+.navbar-brand {
+    font-style: italic;
+    color:whitesmoke;
+}
+
+.form-inline{
+    color:black;
+}
