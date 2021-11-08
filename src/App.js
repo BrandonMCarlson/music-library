@@ -44,7 +44,7 @@ class App extends Component {
       <div className="Navlink">
       <ul class="nav nav-pills">
         <li class="nav-item">
-        <a class="nav-link active" href="#">Home</a>
+        <a class="nav-link active" href="public\index.html">Home</a>
         </li>
         <li class="nav-item">
         <a class="nav-link" href="#">TBD</a>
