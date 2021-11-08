@@ -1,1 +1,32 @@
+body{
+    background-image: url(/src/images/DJ.jpg);
+    display: grid;
+    background-size: cover;
+    
 
+}
+.header{
+    color:#5B4EBB;
+    text-align: center;  
+        color: #FFF;
+        background-color: #232323;
+        text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #1827ff, 0 0 30px #2f18ff, 0 0 40px #2f18ff, 0 0 55px #3b18ff, 0 0 75px #181cff
+ 
+}
+
+.holder-styles{
+    width: 800px;
+    margin-top: 4%;
+    height: 30%;
+    overflow:scroll;
+    color: white;
+    background: darkgrey;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+    border: 6px double #1C6EA4;
+
+}
+
+.search-bar {
+    margin-bottom: 5px;
+}

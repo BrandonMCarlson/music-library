@@ -2,5 +2,13 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
 
 
-<h1>h1. Bootstrap heading</h1>
+const Header = ({}) => {
+    return(
+        <div className="header">
+            <h1>dCC Music Library!</h1> 
+        </div>
+        
+    )
+}
 
+export default Header;

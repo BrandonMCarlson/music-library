@@ -1,14 +1,17 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
+import './SearchBar.css'
 
 
-function SearchBar() {
+function SearchBar(props) {
     return (
-        <nav class="navbar navbar-light bg-light">
+      
+        <nav class="searchbar">
         <a class="navbar-brand">dCC Music</a>
         <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <input value={props.event}
+            onChange={props.handleChange}  class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+          <button class="btn" type="submit">Search</button>
         </form>
       </nav> 
     )
