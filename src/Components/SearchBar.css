@@ -1,11 +1,13 @@
 .searchbar{
     border-style:dashed;
     font-family: fantasy;
+    font-style: italic;
        
 }
 .btn{
     align-self: auto;
-    color:whitesmoke;
+    color:black;
+    background-color: white;
 }
 .navbar-brand {
     font-style: italic;

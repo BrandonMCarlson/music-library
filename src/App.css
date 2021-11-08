@@ -10,8 +10,9 @@ body{
     text-align: center;  
         color: #FFF;
         background-color: #232323;
-        text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #1827ff, 0 0 30px #2f18ff, 0 0 40px #2f18ff, 0 0 55px #3b18ff, 0 0 75px #181cff
- 
+        text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #1827ff, 0 0 30px #2f18ff, 0 0 40px #2f18ff, 0 0 55px #3b18ff, 0 0 75px #181cff;
+        font-style:italic;
+    
 }
 
 .holder-styles{
@@ -20,13 +21,16 @@ body{
     height: 30%;
     overflow:scroll;
     color: white;
-    background: darkgrey;
     -webkit-box-shadow: 5px 5px 15px 5px #000000; 
     box-shadow: 5px 5px 15px 5px #000000;
     border: 6px double #1C6EA4;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: #4B484E;
+    background: -moz-linear-gradient(left, #4B484E 0%, #656465 47%, #F9F7F8 100%);
+    background: -webkit-linear-gradient(left, #4B484E 0%, #656465 47%, #F9F7F8 100%);
+    background: linear-gradient(to right, #4B484E 0%, #656465 47%, #F9F7F8 100%);
 }
 
-.navlink {
-    border-bottom: 2px;
+.Navlink {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

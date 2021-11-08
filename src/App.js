@@ -41,6 +41,7 @@ class App extends Component {
 
   render() { 
     return ( 
+      
       <div className="Navlink">
       <ul class="nav nav-pills">
         <li class="nav-item">
@@ -57,7 +58,7 @@ class App extends Component {
       <div className="search-bar">
           <SearchBar value={this.props} handleChange={this.handleChange}/>
       </div>
-         
+          
           <InformationHolder songs={this.state.songs} ui={this.state.ui} />
  
         

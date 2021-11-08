@@ -6,14 +6,15 @@ import './SearchBar.css'
 function SearchBar(props) {
     return (
       
-        <nav class="searchbar">
-        <a class="navbar-brand">dCC Music</a>
-        <form class="form-inline">
+      <nav class="searchbar">
+      <div class="container-fluid">
+        <form class="d-flex">
           <input value={props.event}
-            onChange={props.handleChange}  class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+            onChange={props.handleChange} class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
           <button class="btn" type="submit">Search</button>
         </form>
-      </nav> 
+      </div>
+    </nav>
     )
 }
 
