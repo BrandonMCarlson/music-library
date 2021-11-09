@@ -4,6 +4,7 @@
     font-style: italic;
     border-width:1rem;   
     border-color: rgb(47, 50, 211);
+    width: 100%;
 }
 .btn{
     align-self: auto;
@@ -18,4 +19,25 @@
 
 .form-inline{
     color:black;
+}
+
+.me-2 {
+    margin-right: 0.5rem!important;
+}
+
+.form-control {
+    display: block;
+    width: 101%;
+    padding: 0.375rem 0.7rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0.25re;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }

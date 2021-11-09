@@ -36,6 +36,8 @@ body{
     font-style: normal;
     font-variant: small-caps;
     text-transform: none;
+    word-wrap: break-word;
+    
     
 }
 
@@ -47,6 +49,11 @@ body{
 .nav-pills .nav-link.active {
     color: rgb(47, 50, 211);
     background-color: #0d6dfd00;
-    
+    font-weight: bolder;
+}
+ul{
+    align-content: stretch;
+    font-weight: bold;
+    word-wrap: normal;
 }
 
