@@ -56,12 +56,9 @@ class App extends Component {
       </ul>
       <Header/>
       <div className="search-bar">
-          <SearchBar value={this.props} handleChange={this.handleChange}/>
-      </div>
-          
+          <SearchBar value={this.state.ui} handleChange={this.handleChange}/>
+      </div>        
           <InformationHolder songs={this.state.songs} ui={this.state.ui} />
- 
-        
       </div>
      );
   }

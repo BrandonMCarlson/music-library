@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
-
+import './Header.css'
 
 const Header = ({}) => {
     return(

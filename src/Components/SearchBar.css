@@ -1,17 +1,19 @@
 .searchbar{
-    border-style:dashed;
-    font-family: fantasy;
+    border-style:groove;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-style: italic;
-       
+    border-width:1rem;   
+    border-color: rgb(47, 50, 211);
 }
 .btn{
     align-self: auto;
     color:black;
     background-color: white;
+    border: none;
 }
 .navbar-brand {
     font-style: italic;
-    color:whitesmoke;
+    color:rgb(47, 50, 211);
 }
 
 .form-inline{

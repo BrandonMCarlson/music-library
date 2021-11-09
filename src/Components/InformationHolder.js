@@ -6,26 +6,16 @@ import './InformationHolder.css'
 const InformationHolder = ({ songs, ui }) => {
     return (
         <div className="holder-styles">
-            <ul >
-                {songs.map((song, i) =>
-                song.title.includes(ui) ||
-                song.artist.includes(ui) ||
-                song.genre.includes(ui) ||
-                song.releaseDate.includes(ui) ||
-                song.album.includes(ui) ? ( 
-                <li>
-                    {" "}
-                    <ul>
-                    <li>Artist: {song.artist}</li>{" "}
-                    <li>Album: {song.album}</li>{" "} 
-                    <li>Song: {song.title}</li>{" "}
-                    <li>Genre: {song.genre}</li>{" "}
-                    <li>ReleaseDate: {song.releaseDate}</li>{" "}
-                </ul> 
-            </li>
-            ) : null
-            )}
+            <ul>
+                {songs.map((song, index)=> (
+                    song.artist.includes(ui) ?  <li key={index}>Title: {song.title} <br/>Artist: {song.artist} <br/> Written in: {song.releaseDate} <br/>Album: {song.album} <br/> Genre: {song.genre} </li> :  
+                    song.title.includes(ui) ?  <li key={index}>Title: {song.title} <br/>Artist: {song.artist} <br/> Written in {song.releaseDate} <br/>Album: {song.album} <br/> Genre: {song.genre} </li> : 
+                    song.genre.includes(ui) ?  <li key={index}>Title: {song.title} <br/>Artist: {song.artist} <br/> Written in {song.releaseDate} <br/>Album: {song.album} <br/> Genre: {song.genre}</li> :  
+                    song.releaseDate.includes(ui) ?  <li key={index}>Title: {song.title} <br/>Artist: {song.artist} <br/> Written in {song.releaseDate} <br/>Album: {song.album} <br/> Genre: {song.genre}</li> :
+                    song.album.includes(ui) ?  <li key={index}>Title: {song.title} <br/>Artist: {song.artist} <br/> Written in {song.releaseDate} <br/>Album: {song.album} <br/> Genre: {song.genre}</li> :null 
+                ))}
             </ul>
+     
         </div>
     );
 };

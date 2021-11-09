@@ -8,29 +8,45 @@ body{
 .header{
     color:#5B4EBB;
     text-align: center;  
-        color: #FFF;
-        background-color: #232323;
-        text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #1827ff, 0 0 30px #2f18ff, 0 0 40px #2f18ff, 0 0 55px #3b18ff, 0 0 75px #181cff;
-        font-style:italic;
-    
+    color: rgb(47, 50, 211);
+    background-color: #23232300;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #fdfdfd, 0 0 30px #01000500, 0 0 40px #010008, 0 0 55px #010007, 0 0 75px #000007;
+    font-style:italic;
 }
 
+
 .holder-styles{
-    width: 800px;
+    width: 1000px;
     margin-top: 4%;
     height: 30%;
     overflow:scroll;
     color: white;
     -webkit-box-shadow: 5px 5px 15px 5px #000000; 
     box-shadow: 5px 5px 15px 5px #000000;
-    border: 6px double #1C6EA4;
-    font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 6px double rgb(47, 50, 211);
     background: #4B484E;
-    background: -moz-linear-gradient(left, #4B484E 0%, #656465 47%, #F9F7F8 100%);
-    background: -webkit-linear-gradient(left, #4B484E 0%, #656465 47%, #F9F7F8 100%);
     background: linear-gradient(to right, #4B484E 0%, #656465 47%, #F9F7F8 100%);
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    color: #faf6f6;
+    font-weight: 400;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+    
 }
 
 .Navlink {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    background-blend-mode: soft-light;
+
 }
+.nav-pills .nav-link.active {
+    color: rgb(47, 50, 211);
+    background-color: #0d6dfd00;
+    
+}
+
