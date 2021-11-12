@@ -1,69 +1,67 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import InformationHolder from './Components/InformationHolder';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './Components/Header'
-import SearchBar from './Components/SearchBar'
+import React, { Component } from "react";
+import axios from "axios";
+import InformationHolder from "./Components/InformationHolder";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./Components/Header";
+import SearchBar from "./Components/SearchBar";
 import "./App.css";
-
-
-
-
-
-
-
+import AddMusic from "./Components/AddMusic";
 
 class App extends Component {
   constructor() {
     super();
     this.handleChange = this.handleChange.bind(this);
 
-    this.state = { 
+    this.state = {
       songs: [],
       ui: "",
-     };
+    };
   }
-  
+
   handleChange(event) {
-    this.setState({ui: event.target.value});
+    this.setState({ ui: event.target.value });
   }
 
   componentDidMount() {
-    await axios.get('http://localhost:3030/api/songs')
-    .then((res) => {
-      const songs = res.data;
-      this.setState({ songs });
-    });
+    axios
+      .get("http://localhost:3030/api/songs", { mode: "cors" })
+      .then((res) => {
+        const songs = res.data;
+        this.setState({ songs });
+      });
   }
-
 
   componentDidUpdate() {}
 
-
-  render() { 
-    return ( 
-      
+  render() {
+    return (
       <div className="Navlink">
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-        <a class="nav-link active" href="public\index.html">Home</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">TBD</a>
-        </li>
-        <li class="nav-item">
-    <a class="nav-link" href="#">TBD</a>
-        </li>
-      </ul>
-      <Header/>
-      <div className="search-bar">
-          <SearchBar value={this.state.ui} handleChange={this.handleChange}/>
-      </div>        
-          <InformationHolder songs={this.state.songs} ui={this.state.ui} />
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link active" href="public\index.html">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              TBD
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              TBD
+            </a>
+          </li>
+        </ul>
+        <Header />
+        <div className="search-bar">
+          <SearchBar value={this.state.ui} handleChange={this.handleChange} />
+        </div>
+        <AddMusic />
+        <InformationHolder songs={this.state.songs} ui={this.state.ui} />
       </div>
-     );
+    );
   }
 }
- 
-export default App;
 
+export default App;
