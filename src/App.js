@@ -40,11 +40,9 @@ class App extends Component {
   }
 
   async createMusic() {
-    axios.post('http://localhost:3000/api/songs')
-    .then((res) => {
-      const songs = res.data;
-      this.setState({songs});
-    })
+    const newSong = {title: ""};
+    axios.post('http://localhost:3000/api/songs', newSong)
+    .then(response => this.setState({id: response.data.id}));
 
   }
 
