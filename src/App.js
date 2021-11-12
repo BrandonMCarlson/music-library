@@ -27,13 +27,25 @@ class App extends Component {
     this.setState({ui: event.target.value});
   }
 
-  async componentDidMount() {
-    await axios.get('http://www.devcodecampmusiclibrary.com/api/music/')
+  componentDidMount() {
+    this.getAllsongs();
+  }
+
+  async getAllsongs() {
+   let response = await axios.get('http://localhost:3000/api/songs');
+    this.setState({
+      songs: response.data
+    });
+
+  }
+
+  async createMusic() {
+    axios.post('http://localhost:3000/api/songs')
     .then((res) => {
-      console.log(res)
       const songs = res.data;
       this.setState({songs});
     })
+
   }
 
   componentDidUpdate() {}
