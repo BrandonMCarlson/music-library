@@ -1,8 +1,31 @@
 // import AddMusiccss from 'AddMusic.css';
+import React, { Component } from 'react';
 
-const AddMusic = (props) => {
-    return(
-        <div className="musicadder">
+
+class AddMusic extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { 
+            songs: [],
+            ui: "",
+         }
+    }
+    
+    handleChange = (event) => {
+        console.log(this.state)
+        console.log(event.target.value)
+        this.setState({
+            [event.target.title]: event.target.value
+        });
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+        this.props.createNewSong(this.state)
+    }
+    render() { 
+        return ( 
+            <div className="musicadder">
             <form action="" method="post">
                 <label for="title">Title: </label>
                 <input type="text" name="title"/><br/>
@@ -16,8 +39,8 @@ const AddMusic = (props) => {
                 <input type="text" name="releaseDate"/> <button type="button" class="btn btn-outline-primary">Submit</button>
             </form>
         </div>
-        
-    )
+         );
+    }
 }
 
 export default AddMusic;
