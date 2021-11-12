@@ -12,6 +12,7 @@ import "./App.css";
 
 
 
+
 class App extends Component {
   constructor() {
     super();
@@ -28,23 +29,13 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.getAllsongs();
-  }
-
-  async getAllsongs() {
-   let response = await axios.get('http://localhost:3000/api/songs');
-    this.setState({
-      songs: response.data
+    await axios.get('http://localhost:3030/api/songs')
+    .then((res) => {
+      const songs = res.data;
+      this.setState({ songs });
     });
-
   }
 
-  async createMusic() {
-    const newSong = {title: ""};
-    axios.post('http://localhost:3000/api/songs', newSong)
-    .then(response => this.setState({id: response.data.id}));
-
-  }
 
   componentDidUpdate() {}
 
