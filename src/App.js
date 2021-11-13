@@ -21,6 +21,9 @@ class App extends Component {
   handleChange(event) {
     this.setState({ ui: event.target.value });
   }
+  handleSubmit(event) {
+    this.setState({ ui: event.target.value });
+  }
 
   componentDidMount() {
     axios
@@ -32,6 +35,14 @@ class App extends Component {
   }
 
   componentDidUpdate() {}
+
+  AddMusic = (createNewSong) => {
+    console.log("From AddMusic component", createNewSong);
+    this.songs.push(createNewSong);
+    this.setState({
+      songs: this.songs.length - 1,
+    });
+  };
 
   render() {
     return (
@@ -57,7 +68,7 @@ class App extends Component {
         <div className="search-bar">
           <SearchBar value={this.state.ui} handleChange={this.handleChange} />
         </div>
-        <AddMusic />
+        <AddMusic createNewSong={this.createNewSong} />
         <InformationHolder songs={this.state.songs} ui={this.state.ui} />
       </div>
     );
